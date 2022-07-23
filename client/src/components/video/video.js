@@ -3,7 +3,6 @@ import "./video.css";
 import axios from "axios";
 
 function Video(props) {
-  const subject = "life"; // placeholder
   const [isLoading, setIsLoading] = useState(true);
   const [lectureData, setLectureData] = useState([
     {
@@ -40,7 +39,7 @@ function Video(props) {
       </iframe>
       <div class="title">
         <h1 id="name">{lectureData[props.selectedVideo].lectureTitle}</h1>
-        <h1 id="subject">{subject}</h1>
+        <h1 id="subject">{lectureData[props.selectedVideo].subject}</h1>
       </div>
     </div>
   );
