@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './sidebar.css'
 
-export default function Sidebar(toggleVideo) {
+export default function Sidebar(prop) {
     // connect to backend
     const name = 'name'
 
@@ -80,7 +80,7 @@ export default function Sidebar(toggleVideo) {
         setCourse2Selected(false)
         setCourse3Selected(false)
         setCourse4Selected(false)
-        toggleVideo(0)
+        prop.toggleVideo(0)
     }
 
     const selectCourse2 = () => {
@@ -88,7 +88,7 @@ export default function Sidebar(toggleVideo) {
         setCourse2Selected(true)
         setCourse3Selected(false)
         setCourse4Selected(false)
-        toggleVideo(1)
+        prop.toggleVideo(1)
     }
 
     const selectCourse3 = () => {
@@ -96,7 +96,7 @@ export default function Sidebar(toggleVideo) {
         setCourse2Selected(false)
         setCourse3Selected(true)
         setCourse4Selected(false)
-        toggleVideo(2)
+        prop.toggleVideo(2)
     }
 
     const selectCourse4 = () => {
@@ -104,7 +104,7 @@ export default function Sidebar(toggleVideo) {
         setCourse2Selected(false)
         setCourse3Selected(false)
         setCourse4Selected(true)
-        toggleVideo(3)
+        prop.toggleVideo(3)
     }
 
     return (
