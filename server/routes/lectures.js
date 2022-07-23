@@ -5,5 +5,4 @@ const router = express.Router();
 
 router.get('/', lecture.getLectures);
 
-
 export default router;
