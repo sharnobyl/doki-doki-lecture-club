@@ -1,6 +1,7 @@
 .topbar {
+    <<<<<<< HEAD position: fixed;
     height: 50px;
-    width: 100%;
+    =======>>>>>>>f080fa89db4a136ea252a39948d43c5dc327ae26 width: 100%;
     background-color: #F4DCEA;
     border-bottom: 5px solid;
     border-bottom-color: #F9B7DB;
