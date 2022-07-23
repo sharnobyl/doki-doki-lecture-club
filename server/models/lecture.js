@@ -7,7 +7,7 @@ const lectureSchema = new mongoose.Schema({
   comments: [
     {
       userName: String,
-      currMessage: String,
+      commentMessage: String,
       timeStampSeconds: Number,
     },
   ],

@@ -6,23 +6,27 @@ export const getLectures = async (req, res) => {
     const subjects = await Lecture.find({});
     res.json(subjects);
   } catch (error) {
-    res.status(200).json({ message: error.message });
+    res.status(404).json({ message: error.message });
   }
 };
 
 export const commentLecture = async (req, res) => {
   const { id } = req.params;
-  const { commentMessage } = req.body;
+  const { comment } = req.body;
 
-  const lecture = await Lecture.findById(id);
+  try {
+    const lecture = await Lecture.findById(id);
 
-  lecture.comments.push(commentMessage);
+    lecture.comments.push(comment);
+    console.log("post request");
+    const updatedLecture = await Lecture.findByIdAndUpdate(id, lecture, {
+      new: true,
+    });
 
-  const updatedLecture = await Lecture.findByIdAndUpdate(id, lecture, {
-    new: true,
-  });
-
-  res.json(updatedLecture);
+    res.json(updatedLecture);
+  } catch (error) {
+    res.json({ message: error.message });
+  }
 };
 
 export const createSubject = async (req, res) => {};
