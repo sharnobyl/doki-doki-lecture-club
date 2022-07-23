@@ -8,6 +8,7 @@ const ChatBox = () => {
         { id: 3, message: 'Austria' },
     ]
     )
+    const [listElements, setListElements] = useState([React.createElement('li',{},'chat start')])
 
     const createList= () => {
         const list = React.createElement('ul',{},[])
@@ -21,7 +22,7 @@ const ChatBox = () => {
 
     return (
         <div className="chatbox">
-            {createList}
+            {listElements}
         </div>
     );
 }
