@@ -28,8 +28,3 @@ h1 {
 #subject {
     float: right;
 }
-
-button {
-    position: absolute;
-    bottom: 50px;
-}
