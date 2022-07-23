@@ -1,6 +1,7 @@
 .videoplayer {
-    margin-top: -45px;
-    margin-left: -290px;
+    position: absolute;
+    top: 60px;
+    left: 60px;
     border: 5px solid rgb(246, 184, 220);
     border-radius: 5px;
     padding-bottom: 45px;
