@@ -5,9 +5,9 @@ import axios from 'axios'
 const ChatBox = (props) => {
     const [messages, setMessages] = useState([
         {
-            messages: [{ time: 1, message: 'Austria', user: '232' },
-            { time: 2, message: 'Germany', user: '24322' },
-            { time: 3, message: 'Austria', user: '235322' }]
+            messages: [{ timeStampSeconds: 1, commentMessage: 'Austria', userName: '232' },
+            { timeStampSeconds: 2, commentMessage: 'Germany', userName: '24322' },
+            { timeStampSeconds: 3, commentMessage: 'Austria', userName: '235322' }]
         },
     ]);
 
@@ -21,7 +21,7 @@ const ChatBox = (props) => {
 
     const displayMessage = (message) => {
         return (
-            <p>{message.time} {message.user}: {message.message}</p>
+            <p>{message.timeStampSeconds} {message.userName}: {message.commentMessage}</p>
         )
     }
 
