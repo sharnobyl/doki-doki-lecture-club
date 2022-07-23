@@ -13,7 +13,6 @@ export default function Sidebar(prop) {
     const [course5Selected, setCourse5Selected] = useState(false)
     const [course6Selected, setCourse6Selected] = useState(false)
     const [course7Selected, setCourse7Selected] = useState(false)
-    const [course8Selected, setCourse8Selected] = useState(false)
     const [course9Selected, setCourse9Selected] = useState(false)
 
     const [lectureData, setLectureData] = useState(null)
@@ -35,9 +34,7 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
-
         } else {
             ReactDOM.render(`${lectureData[0].lectureTitle}`, document.getElementById("btn1"));
             ReactDOM.render(`${lectureData[1].lectureTitle}`, document.getElementById("btn2"));
@@ -46,7 +43,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(`${lectureData[4].lectureTitle}`, document.getElementById("btn5"));
             ReactDOM.render(`${lectureData[5].lectureTitle}`, document.getElementById("btn6"));
             ReactDOM.render(`${lectureData[6].lectureTitle}`, document.getElementById("btn7"));
-            ReactDOM.render(`${lectureData[7].lectureTitle}`, document.getElementById("btn8"));
             ReactDOM.render(`${lectureData[8].lectureTitle}`, document.getElementById("btn9"));
         }
         setClicked(!clicked)
@@ -61,7 +57,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
 
@@ -76,7 +71,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
 
@@ -91,7 +85,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
     }
@@ -105,7 +98,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
     }
@@ -118,7 +110,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(`${lectureData[4].lectureTitle}`, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
     }
@@ -132,7 +123,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(`${lectureData[5].lectureTitle}`, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
     }
@@ -146,21 +136,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(`${lectureData[6].lectureTitle}`, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
-            ReactDOM.render(``, document.getElementById("btn9"));
-        }
-    }
-
-    const addCourseName8 = () => {
-        if (!clicked) {
-            ReactDOM.render(``, document.getElementById("btn1"));
-            ReactDOM.render(``, document.getElementById("btn2"));
-            ReactDOM.render(``, document.getElementById("btn3"));
-            ReactDOM.render(``, document.getElementById("btn4"));
-            ReactDOM.render(``, document.getElementById("btn5"));
-            ReactDOM.render(``, document.getElementById("btn6"));
-            ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(`${lectureData[7].lectureTitle}`, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
     }
@@ -174,7 +149,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(`${lectureData[8].lectureTitle}`, document.getElementById("btn9"));
         }
     }
@@ -188,7 +162,6 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
 
@@ -202,7 +175,6 @@ export default function Sidebar(prop) {
         setCourse5Selected(false)
         setCourse6Selected(false)
         setCourse7Selected(false)
-        setCourse8Selected(false)
         setCourse9Selected(false)
         prop.toggleVideo(0)
     }
@@ -215,7 +187,6 @@ export default function Sidebar(prop) {
         setCourse5Selected(false)
         setCourse6Selected(false)
         setCourse7Selected(false)
-        setCourse8Selected(false)
         setCourse9Selected(false)
         prop.toggleVideo(1)
     }
@@ -228,7 +199,6 @@ export default function Sidebar(prop) {
         setCourse5Selected(false)
         setCourse6Selected(false)
         setCourse7Selected(false)
-        setCourse8Selected(false)
         setCourse9Selected(false)
         prop.toggleVideo(2)
     }
@@ -241,7 +211,6 @@ export default function Sidebar(prop) {
         setCourse5Selected(false)
         setCourse6Selected(false)
         setCourse7Selected(false)
-        setCourse8Selected(false)
         setCourse9Selected(false)
         prop.toggleVideo(3)
     }
@@ -254,7 +223,6 @@ export default function Sidebar(prop) {
         setCourse5Selected(true)
         setCourse6Selected(false)
         setCourse7Selected(false)
-        setCourse8Selected(false)
         setCourse9Selected(false)
         prop.toggleVideo(4)
     }
@@ -267,7 +235,6 @@ export default function Sidebar(prop) {
         setCourse5Selected(false)
         setCourse6Selected(true)
         setCourse7Selected(false)
-        setCourse8Selected(false)
         setCourse9Selected(false)
         prop.toggleVideo(5)
     }
@@ -280,22 +247,10 @@ export default function Sidebar(prop) {
         setCourse5Selected(false)
         setCourse6Selected(false)
         setCourse7Selected(true)
-        setCourse8Selected(false)
         setCourse9Selected(false)
         prop.toggleVideo(6)
     }
-    const selectCourse8 = () => {
-        setCourse1Selected(false)
-        setCourse2Selected(false)
-        setCourse3Selected(false)
-        setCourse4Selected(false)
-        setCourse5Selected(false)
-        setCourse6Selected(false)
-        setCourse7Selected(false)
-        setCourse8Selected(true)
-        setCourse9Selected(false)
-        prop.toggleVideo(7)
-    }
+
     const selectCourse9 = () => {
         setCourse1Selected(false)
         setCourse2Selected(false)
@@ -304,7 +259,6 @@ export default function Sidebar(prop) {
         setCourse5Selected(false)
         setCourse6Selected(false)
         setCourse7Selected(false)
-        setCourse8Selected(false)
         setCourse9Selected(true)
         prop.toggleVideo(8)
     }
@@ -333,9 +287,6 @@ export default function Sidebar(prop) {
             </div>
             <div className={course7Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName7} onMouseLeave={removeCourseName}>
                 <div id="btn7" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse7}></div>
-            </div>
-            <div className={course8Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName8} onMouseLeave={removeCourseName}>
-                <div id="btn8" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse8}></div>
             </div>
             <div className={course9Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName9} onMouseLeave={removeCourseName}>
                 <div id="btn9" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse9}></div>
