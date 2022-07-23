@@ -14,44 +14,79 @@ export default function Sidebar() {
 
     const addOpenMenuClass = () => {
         setClicked(!clicked);
+        ReactDOM.render(`1`, document.getElementById("btn1"));
+        ReactDOM.render(`2`, document.getElementById("btn2"));
+        ReactDOM.render(`3`, document.getElementById("btn3"));
+        ReactDOM.render(`4`, document.getElementById("btn4"));
+        setCourse1Clicked(false)
+        setCourse2Clicked(false)
+        setCourse3Clicked(false)
+        setCourse4Clicked(false)
     }
 
     const addCourseName1 = () => {
-        if (course1Clicked && clicked) {
+        if (!course1Clicked && clicked) {
             ReactDOM.render(`1. ${name}`, document.getElementById("btn1"));
         } else {
             ReactDOM.render(`1`, document.getElementById("btn1"));
         }
         setCourse1Clicked(!course1Clicked)
 
+        ReactDOM.render(`2`, document.getElementById("btn2"));
+        ReactDOM.render(`3`, document.getElementById("btn3"));
+        ReactDOM.render(`4`, document.getElementById("btn4"));
+        setCourse2Clicked(false)
+        setCourse3Clicked(false)
+        setCourse4Clicked(false)
     }
 
     const addCourseName2 = () => {
-        if (course2Clicked && clicked) {
+        if (!course2Clicked && clicked) {
             ReactDOM.render(`2. ${name}`, document.getElementById("btn2"));
         } else {
             ReactDOM.render(`2`, document.getElementById("btn2"));
         }
         setCourse2Clicked(!course2Clicked)
 
+        ReactDOM.render(`1`, document.getElementById("btn1"));
+        ReactDOM.render(`3`, document.getElementById("btn3"));
+        ReactDOM.render(`4`, document.getElementById("btn4"));
+        setCourse1Clicked(false)
+        setCourse3Clicked(false)
+        setCourse4Clicked(false)
+
     }
 
     const addCourseName3 = () => {
-        if (course3Clicked && clicked) {
+        if (!course3Clicked && clicked) {
             ReactDOM.render(`3. ${name}`, document.getElementById("btn3"));
         } else {
             ReactDOM.render(`3`, document.getElementById("btn3"));
         }
         setCourse3Clicked(!course3Clicked)
+
+        ReactDOM.render(`1`, document.getElementById("btn1"));
+        ReactDOM.render(`2`, document.getElementById("btn2"));
+        ReactDOM.render(`4`, document.getElementById("btn4"));
+        setCourse1Clicked(false)
+        setCourse2Clicked(false)
+        setCourse4Clicked(false)
     }
 
     const addCourseName4 = () => {
-        if (course4Clicked && clicked) {
+        if (!course4Clicked && clicked) {
             ReactDOM.render(`4. ${name}`, document.getElementById("btn4"));
         } else {
             ReactDOM.render(`4`, document.getElementById("btn4"));
         }
         setCourse4Clicked(!course4Clicked)
+
+        ReactDOM.render(`1`, document.getElementById("btn1"));
+        ReactDOM.render(`2`, document.getElementById("btn2"));
+        ReactDOM.render(`3`, document.getElementById("btn3"));
+        setCourse1Clicked(false)
+        setCourse2Clicked(false)
+        setCourse3Clicked(false)
 
     }
 
