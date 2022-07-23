@@ -10,13 +10,15 @@ const ChatBox = (props) => {
             { timeStampSeconds: 3, commentMessage: 'Austria', userName: '235322' }]
         },
     ]);
+    const [display, setDisplay] = useState(null)
 
     useEffect(
         () => {
             axios.get("http://localhost:5000/lecture").then(function (response) {
                 setMessages(response.data[props.selectedVideo].comments)
             });
-        }
+            setDisplay(messages.map(m => displayMessage(m)))
+        }, [messages, props.selectedVideo]
     );
 
     const displayMessage = (message) => {
@@ -27,7 +29,7 @@ const ChatBox = (props) => {
 
     return (
         <div className='chatbox'>
-            {messages.map(m => displayMessage(m))}
+            {display}
         </div>
     )
 }
