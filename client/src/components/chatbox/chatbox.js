@@ -9,19 +9,19 @@ const ChatBox = () => {
     ]
     )
 
-    const printMessage = () => {
+    function createList() {
+        const list = React.createElement('ul',{},[])
         messages.forEach((message) => {
-            React.createElement(
-                'li',
-                {},
-                { message }
-            )
+            const listElement = React.createContext('li',{}, message)
+            listElement.textContent = message
+            list.appendChild(listElement)
         })
+        return list;
     }
 
     return (
         <div className="chatbox">
-            <ul>{printMessage()}</ul>
+            {createList()}
         </div>
     );
 }
