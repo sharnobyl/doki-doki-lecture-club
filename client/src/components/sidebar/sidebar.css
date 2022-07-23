@@ -77,3 +77,21 @@
 .selected div {
     color: black;
 }
+
+.subjectBtn {
+    position: relative;
+    background-color: rgb(218, 97, 168);
+    height: 20px;
+    width: 30px;
+    margin-top: 10px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.subjectBtnOpen {
+    width: 180px;
+}

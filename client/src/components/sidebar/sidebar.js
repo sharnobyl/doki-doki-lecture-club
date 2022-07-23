@@ -267,6 +267,8 @@ export default function Sidebar(prop) {
         <div className={clicked ? "sidebar menuOpen" : "sidebar"} >
             <div className={clicked ? "menuBtn menuBtnOpen" : "menuBtn"} onClick={addOpenMenuClass}></div>
 
+            <div className={clicked ? "subjectBtn subjectBtnOpen" : "subjectBtn"}>Subject 1</div>
+
             <div className={course1Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName1} onMouseLeave={removeCourseName}>
                 <div id="btn1" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse1}></div>
             </div>
@@ -276,18 +278,27 @@ export default function Sidebar(prop) {
             <div className={course3Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName3} onMouseLeave={removeCourseName}>
                 <div id="btn3" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse3}></div>
             </div>
+
+            <div className={clicked ? "subjectBtn subjectBtnOpen" : "subjectBtn"}>Subject 2</div>
+
             <div className={course4Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName4} onMouseLeave={removeCourseName}>
                 <div id="btn4" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse4}></div>
             </div>
             <div className={course5Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName5} onMouseLeave={removeCourseName}>
                 <div id="btn5" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse5}></div>
             </div>
+
+            <div className={clicked ? "subjectBtn subjectBtnOpen" : "subjectBtn"}>Subject 3</div>
+
             <div className={course6Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName6} onMouseLeave={removeCourseName}>
                 <div id="btn6" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse6}></div>
             </div>
             <div className={course7Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName7} onMouseLeave={removeCourseName}>
                 <div id="btn7" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse7}></div>
             </div>
+
+            <div className={clicked ? "subjectBtn subjectBtnOpen" : "subjectBtn"}>Subject 4 </div>
+
             <div className={course9Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName9} onMouseLeave={removeCourseName}>
                 <div id="btn9" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse9}></div>
             </div>
