@@ -1,4 +1,4 @@
-.side-bar {
+.sidebar {
     position: fixed;
     top: 50px;
     left: 0px;
@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    transition: all 0.2s;
 }
 
 .menuBtn {
@@ -28,4 +29,8 @@
 .menuBtn:active {
     left: 0.5px;
     top: 0.5px;
+}
+
+.menuOpen {
+    width: 100px;
 }
