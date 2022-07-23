@@ -14,6 +14,10 @@ export default function Sidebar(prop) {
     const [course6Selected, setCourse6Selected] = useState(false)
     const [course7Selected, setCourse7Selected] = useState(false)
     const [course9Selected, setCourse9Selected] = useState(false)
+    const [sub1Selected, setSub1Selected] = useState(true)
+    const [sub2Selected, setSub2Selected] = useState(false)
+    const [sub3Selected, setSub3Selected] = useState(false)
+    const [sub4Selected, setSub4Selected] = useState(false)
 
     const [lectureData, setLectureData] = useState(null)
 
@@ -185,6 +189,10 @@ export default function Sidebar(prop) {
         setCourse6Selected(false)
         setCourse7Selected(false)
         setCourse9Selected(false)
+        setSub1Selected(true)
+        setSub2Selected(false)
+        setSub3Selected(false)
+        setSub4Selected(false)
         prop.toggleVideo(0)
     }
 
@@ -197,6 +205,10 @@ export default function Sidebar(prop) {
         setCourse6Selected(false)
         setCourse7Selected(false)
         setCourse9Selected(false)
+        setSub1Selected(true)
+        setSub2Selected(false)
+        setSub3Selected(false)
+        setSub4Selected(false)
         prop.toggleVideo(1)
     }
 
@@ -209,6 +221,10 @@ export default function Sidebar(prop) {
         setCourse6Selected(false)
         setCourse7Selected(false)
         setCourse9Selected(false)
+        setSub1Selected(true)
+        setSub2Selected(false)
+        setSub3Selected(false)
+        setSub4Selected(false)
         prop.toggleVideo(2)
     }
 
@@ -221,6 +237,10 @@ export default function Sidebar(prop) {
         setCourse6Selected(false)
         setCourse7Selected(false)
         setCourse9Selected(false)
+        setSub1Selected(false)
+        setSub2Selected(true)
+        setSub3Selected(false)
+        setSub4Selected(false)
         prop.toggleVideo(3)
     }
 
@@ -233,6 +253,10 @@ export default function Sidebar(prop) {
         setCourse6Selected(false)
         setCourse7Selected(false)
         setCourse9Selected(false)
+        setSub1Selected(false)
+        setSub2Selected(true)
+        setSub3Selected(false)
+        setSub4Selected(false)
         prop.toggleVideo(4)
     }
 
@@ -245,6 +269,10 @@ export default function Sidebar(prop) {
         setCourse6Selected(true)
         setCourse7Selected(false)
         setCourse9Selected(false)
+        setSub1Selected(false)
+        setSub2Selected(false)
+        setSub3Selected(true)
+        setSub4Selected(false)
         prop.toggleVideo(5)
     }
 
@@ -257,6 +285,10 @@ export default function Sidebar(prop) {
         setCourse6Selected(false)
         setCourse7Selected(true)
         setCourse9Selected(false)
+        setSub1Selected(false)
+        setSub2Selected(false)
+        setSub3Selected(true)
+        setSub4Selected(false)
         prop.toggleVideo(6)
     }
 
@@ -269,16 +301,58 @@ export default function Sidebar(prop) {
         setCourse6Selected(false)
         setCourse7Selected(false)
         setCourse9Selected(true)
+        setSub1Selected(false)
+        setSub2Selected(false)
+        setSub3Selected(false)
+        setSub4Selected(true)
         prop.toggleVideo(8)
     }
 
+    const checkSubject1 = () => {
+        if (sub1Selected && clicked) {
+            return "subjectBtn subjectBtnOpen subjectSelected"
+        } else if (clicked) {
+            return "subjectBtn subjectBtnOpen"
+        } else {
+            return "subjectBtn"
+        }
+    }
 
+    const checkSubject2 = () => {
+        if (sub2Selected && clicked) {
+            return "subjectBtn subjectBtnOpen subjectSelected"
+        } else if (clicked) {
+            return "subjectBtn subjectBtnOpen"
+        } else {
+            return "subjectBtn"
+        }
+    }
+
+    const checkSubject3 = () => {
+        if (sub3Selected && clicked) {
+            return "subjectBtn subjectBtnOpen subjectSelected"
+        } else if (clicked) {
+            return "subjectBtn subjectBtnOpen"
+        } else {
+            return "subjectBtn"
+        }
+    }
+
+    const checkSubject4 = () => {
+        if (sub4Selected && clicked) {
+            return "subjectBtn subjectBtnOpen subjectSelected"
+        } else if (clicked) {
+            return "subjectBtn subjectBtnOpen"
+        } else {
+            return "subjectBtn"
+        }
+    }
 
     return (
         <div className={clicked ? "sidebar menuOpen" : "sidebar"} >
             <div className={clicked ? "menuBtn menuBtnOpen" : "menuBtn"} onClick={addOpenMenuClass}></div>
 
-            <div id="sub1" className={clicked ? "subjectBtn subjectBtnOpen" : "subjectBtn"}></div>
+            <div id="sub1" className={checkSubject1()}></div>
 
             <div className={course1Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName1} onMouseLeave={removeCourseName}>
                 <div id="btn1" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse1}></div>
@@ -290,7 +364,7 @@ export default function Sidebar(prop) {
                 <div id="btn3" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse3}></div>
             </div>
 
-            <div id="sub2" className={clicked ? "subjectBtn subjectBtnOpen" : "subjectBtn"}></div>
+            <div id="sub2" className={checkSubject2()}></div>
 
             <div className={course4Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName4} onMouseLeave={removeCourseName}>
                 <div id="btn4" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse4}></div>
@@ -299,7 +373,7 @@ export default function Sidebar(prop) {
                 <div id="btn5" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse5}></div>
             </div>
 
-            <div id="sub3" className={clicked ? "subjectBtn subjectBtnOpen" : "subjectBtn"}></div>
+            <div id="sub3" className={checkSubject3()}></div>
 
             <div className={course6Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName6} onMouseLeave={removeCourseName}>
                 <div id="btn6" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse6}></div>
@@ -308,7 +382,7 @@ export default function Sidebar(prop) {
                 <div id="btn7" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse7}></div>
             </div>
 
-            <div id="sub4" className={clicked ? "subjectBtn subjectBtnOpen" : "subjectBtn"}></div>
+            <div id="sub4" className={checkSubject4()}></div>
 
             <div className={course9Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName9} onMouseLeave={removeCourseName}>
                 <div id="btn9" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse9}></div>

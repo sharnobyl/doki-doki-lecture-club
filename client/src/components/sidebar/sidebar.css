@@ -95,3 +95,8 @@
 .subjectBtnOpen {
     width: 180px;
 }
+
+.subjectSelected {
+    background-color: rgb(202, 21, 126);
+    color: white;
+}
