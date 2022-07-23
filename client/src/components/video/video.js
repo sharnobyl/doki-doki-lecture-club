@@ -22,7 +22,7 @@ function Video(props) {
   return (
     <div class="videoplayer">
       <iframe
-        src={lectureData[props.selectedVideo].lectureLink}
+        src={lectureData[0].lectureLink}
         frameBorder="0"
         title="YouTube video player"
         height="315"
@@ -34,7 +34,7 @@ function Video(props) {
         Browser not compatible
       </iframe>
       <div class="title">
-        <h1 id="name">{lectureData[props.selectedVideo].lectureTitle}</h1>
+        <h1 id="name">{lectureData[0].lectureTitle}</h1>
         <h1 id="subject">{subject}</h1>
       </div>
     </div>
