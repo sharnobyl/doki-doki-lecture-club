@@ -8,10 +8,10 @@ import Jumpscare from './components/jumpscare/jumpscare';
 
 function App() {
 
-  const [selectedVideo, setSelectedVideo] = useState(1);
+  const [selectedVideo, setSelectedVideo] = useState(0);
 
-  const toggleVideo = (videoId) => {
-    setSelectedVideo(videoId)
+  const toggleVideo = (lectureKey) => {
+    setSelectedVideo(lectureKey)
   }
 
   return (
@@ -21,7 +21,6 @@ function App() {
       <Video selectedVideo={selectedVideo} />
       <Topbar />
       <div className='viewSpace'>
-        <Video />
         <ChatBox />
       </div>
       <Jumpscare />

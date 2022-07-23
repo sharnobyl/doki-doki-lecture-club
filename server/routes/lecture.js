@@ -1,8 +1,9 @@
-import express from 'express';
-import * as subject from '../controllers/lecture.js';
+import express from "express";
+import * as lecture from "../controllers/lecture.js";
 
 const router = express.Router();
 
-router.get('/', subject.getLectures);
+router.get("/", lecture.getLectures);
+router.post("/:id/comment", lecture.commentLecture);
 
 export default router;

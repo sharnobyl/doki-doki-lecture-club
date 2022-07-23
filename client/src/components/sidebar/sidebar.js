@@ -7,7 +7,7 @@ export default function Sidebar(toggleVideo) {
     const name = 'name'
 
     const [clicked, setClicked] = useState(false);
-    const [course1Selected, setCourse1Selected] = useState(false)
+    const [course1Selected, setCourse1Selected] = useState(true)
     const [course2Selected, setCourse2Selected] = useState(false)
     const [course3Selected, setCourse3Selected] = useState(false)
     const [course4Selected, setCourse4Selected] = useState(false)
@@ -108,7 +108,7 @@ export default function Sidebar(toggleVideo) {
     }
 
     return (
-        <div className={clicked ? "sidebar menuOpen" : "sidebar"}>
+        <div className={clicked ? "sidebar menuOpen" : "sidebar"} >
             <div className={clicked ? "menuBtn menuBtnOpen" : "menuBtn"} onClick={addOpenMenuClass}></div>
 
             <div className={course1Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName1} onMouseLeave={removeCourseName}>
