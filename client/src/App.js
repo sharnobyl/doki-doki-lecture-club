@@ -16,14 +16,14 @@ function App() {
 
   return (
     <div className="App">
-
+        
       <Sidebar toggleVideo={toggleVideo} />
       <Video selectedVideo={selectedVideo} />
       <Topbar />
       <div className='viewSpace'>
         <ChatBox />
       </div>
-      <Jumpscare />
+      
     </div>
 
   );
