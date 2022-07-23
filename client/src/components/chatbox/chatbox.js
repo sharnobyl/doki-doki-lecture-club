@@ -16,7 +16,7 @@ const ChatBox = (props) => {
             axios.get("http://localhost:5000/lecture").then(function (response) {
                 setMessages(response.data[props.selectedVideo].comments)
             });
-        }, []
+        }
     );
 
     const displayMessage = (message) => {
