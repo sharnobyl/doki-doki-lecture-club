@@ -30,12 +30,22 @@ const ChatBox = (props) => {
         )
     }
 
+    const submitComment = () => {
+        setText('')
+    }
+
+    const [text, setText] = useState('')
+
+    const updateTextbox = (event) => {
+        setText(event.target.value)
+    }
+
     return (
         <div className='chatbox'>
             {display}
             <form>
-                <textarea></textarea>
-                <button id="submitComment">Submit</button>
+                <textarea id='text'></textarea>
+                <div id="submitComment" onClick={submitComment} textContent={text} onChange={updateTextbox}>Submit</div>
             </form>
 
         </div>
