@@ -4,8 +4,6 @@ import './sidebar.css'
 import axios from 'axios';
 
 export default function Sidebar(prop) {
-    // connect to backend
-    const name = 'name'
 
     const [clicked, setClicked] = useState(false);
     const [course1Selected, setCourse1Selected] = useState(true)
@@ -17,10 +15,10 @@ export default function Sidebar(prop) {
     useEffect(
         () => {
             axios.get("http://localhost:5000/lecture").then(function (response) {
-              setLectureData(response.data);
+                setLectureData(response.data);
             });
-          }, []
-      );
+        }, []
+    );
 
     const addOpenMenuClass = () => {
         if (clicked) {
@@ -29,17 +27,17 @@ export default function Sidebar(prop) {
             ReactDOM.render(`3`, document.getElementById("btn3"));
             ReactDOM.render(`4`, document.getElementById("btn4"));
         } else {
-            ReactDOM.render(`1. ${name}`, document.getElementById("btn1"));
-            ReactDOM.render(`2. ${name}`, document.getElementById("btn2"));
-            ReactDOM.render(`3. ${name}`, document.getElementById("btn3"));
-            ReactDOM.render(`4. ${name}`, document.getElementById("btn4"));
+            ReactDOM.render(`1. ${lectureData[0].lectureTitle}`, document.getElementById("btn1"));
+            ReactDOM.render(`2. ${lectureData[0].lectureTitle}`, document.getElementById("btn2"));
+            ReactDOM.render(`3. ${lectureData[0].lectureTitle}`, document.getElementById("btn3"));
+            ReactDOM.render(`4. ${lectureData[0].lectureTitle}`, document.getElementById("btn4"));
         }
         setClicked(!clicked)
     }
 
     const addCourseName1 = () => {
         if (!clicked) {
-            ReactDOM.render(`1. ${name}`, document.getElementById("btn1"));
+            ReactDOM.render(`1. ${lectureData[0].lectureTitle}`, document.getElementById("btn1"));
             ReactDOM.render(`2`, document.getElementById("btn2"));
             ReactDOM.render(`3`, document.getElementById("btn3"));
             ReactDOM.render(`4`, document.getElementById("btn4"));
@@ -50,7 +48,7 @@ export default function Sidebar(prop) {
     const addCourseName2 = () => {
         if (!clicked) {
             ReactDOM.render(`1`, document.getElementById("btn1"));
-            ReactDOM.render(`2. ${name}`, document.getElementById("btn2"));
+            ReactDOM.render(`2. ${lectureData[1].lectureTitle}`, document.getElementById("btn2"));
             ReactDOM.render(`3`, document.getElementById("btn3"));
             ReactDOM.render(`4`, document.getElementById("btn4"));
         }
@@ -61,7 +59,7 @@ export default function Sidebar(prop) {
         if (!clicked) {
             ReactDOM.render(`1`, document.getElementById("btn1"));
             ReactDOM.render(`2`, document.getElementById("btn2"));
-            ReactDOM.render(`3. ${name}`, document.getElementById("btn3"));
+            ReactDOM.render(`3. ${lectureData[2].lectureTitle}`, document.getElementById("btn3"));
             ReactDOM.render(`4`, document.getElementById("btn4"));
         }
     }
@@ -71,7 +69,7 @@ export default function Sidebar(prop) {
             ReactDOM.render(`1`, document.getElementById("btn1"));
             ReactDOM.render(`2`, document.getElementById("btn2"));
             ReactDOM.render(`3`, document.getElementById("btn3"));
-            ReactDOM.render(`4. ${name}`, document.getElementById("btn4"));
+            ReactDOM.render(`4. ${lectureData[3].lectureTitle}`, document.getElementById("btn4"));
         }
     }
 
