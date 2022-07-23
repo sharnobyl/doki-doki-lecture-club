@@ -4,7 +4,7 @@
     top: 65px;
     height: calc(70vw/1.77 + 90px);
     width: 23vw;
-    background-color: white;
+    background-color: rgb(240, 123, 191);
     border: 5px solid rgb(246, 184, 220);
     border-radius: 5px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -16,4 +16,6 @@
 
 p {
     text-align: left;
+    color: white;
+    font-size: 16px;
 }
