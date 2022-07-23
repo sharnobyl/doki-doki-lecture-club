@@ -1,10 +1,10 @@
 import React from 'react'
-// import './chatbox.css'
+import './chatbox.css'
 
 const ChatBox = () => {
     return (
         <div>
-            chatbox
+            charbox placeholder
         </div>
     );
 }

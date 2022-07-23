@@ -5,9 +5,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <h1>
           doki doki dunking on u
-        </p>
+        </h1>
       </header>
       <ChatBox />
     </div>
