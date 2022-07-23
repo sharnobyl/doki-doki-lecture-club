@@ -1,0 +1,12 @@
+iframe{
+    width: 70vw;
+    height: calc(70vw/1.77);
+    position: absolute;
+    left: 60px;
+    top: 60px;
+  }
+
+  button{
+    position: absolute;
+    bottom: 50px;
+  }
