@@ -1,4 +1,5 @@
 .topbar {
+    position: fixed;
     height: 70px;
     width: 100%;
     background-color: #F4DCEA;
