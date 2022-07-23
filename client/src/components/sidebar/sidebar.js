@@ -11,7 +11,7 @@ export default function Sidebar() {
 
     return (
         <div className={clicked ? "sidebar menuOpen" : "sidebar"}>
-            <div className="menuBtn" onClick={addOpenMenuClass}></div>
+            <div className={clicked ? "menuBtn menuBtnOpen" : "menuBtn"} onClick={addOpenMenuClass}></div>
         </div >
 
     )
