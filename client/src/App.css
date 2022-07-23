@@ -25,7 +25,11 @@ body {
 }
 
 
-/* topbar {} */
+.topbar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+ }
 
 .video {
     position: absolute;
