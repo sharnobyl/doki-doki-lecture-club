@@ -4,6 +4,7 @@ import './topbar.css'
 export default function Topbar() {
 
     var monicaClick = false;
+    var sayoriClick = false
 
     
     //set the booleans to check if a chibi has been clicked
@@ -12,6 +13,9 @@ export default function Topbar() {
         switch(chibiID){
             case 'monica':
                 monicaClick = !monicaClick;
+                break;
+                case 'sayori':
+                sayoriClick = !sayoriClick;
                 break;
         }
 
@@ -35,6 +39,7 @@ export default function Topbar() {
             </div>
             <div className='chibi'>
                 <img src="/images/monica.png" id="monica" height="125" onMouseOver={e => (e.currentTarget.src = "/images/monica_hover.gif")} onMouseOut={ e => changeImage(monicaClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} />
+                <img src="/images/sayori.png" id="sayori" height="125" onMouseOver={e => (e.currentTarget.src = "/images/sayori_hover.gif")} onMouseOut={ e => changeImage(sayoriClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} />
             </div>
         </div>
     )
