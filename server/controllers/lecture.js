@@ -10,6 +10,21 @@ export const getLectures = async (req, res) => {
   }
 };
 
+export const commentLecture = async (req, res) => {
+  const { id } = req.params;
+  const { commentMessage } = req.body;
+
+  const lecture = await Lecture.findById(id);
+
+  lecture.comments.push(commentMessage);
+
+  const updatedLecture = await Lecture.findByIdAndUpdate(id, lecture, {
+    new: true,
+  });
+
+  res.json(updatedLecture);
+};
+
 export const createSubject = async (req, res) => {};
 
 export const deleteSubject = async (req, res) => {};
