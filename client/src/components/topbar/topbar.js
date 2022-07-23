@@ -2,6 +2,31 @@ import React from 'react'
 import './topbar.css'
 
 export default function Topbar() {
+
+    var monicaClick = false;
+
+    
+    //set the booleans to check if a chibi has been clicked
+    function imageClick(chibiID) {
+
+        switch(chibiID){
+            case 'monica':
+                monicaClick = !monicaClick;
+                break;
+        }
+
+    }
+
+    //change the chibi image depending on whether its been clicked
+    function changeImage(chibiClick, chibiID) {
+        var link = "/images/";
+        if (chibiClick){
+            document.getElementById(chibiID).src = link.concat(chibiID.concat("_hover.gif"));
+        } else {
+            document.getElementById(chibiID).src = link.concat(chibiID.concat(".png"));
+        }
+    }
+
     return (
         <div className='topbar'>
             <div className='logo'>
@@ -9,7 +34,7 @@ export default function Topbar() {
                 <img src="/images/doki_long_logo.png" alt="Logo"/>
             </div>
             <div className='chibi'>
-                <img src="/images/monica.png"  height="125" onMouseOver={e => (e.currentTarget.src = "/images/monica_hover.gif")} onMouseOut={e => (e.currentTarget.src = "/images/monica.png")}/>
+                <img src="/images/monica.png" id="monica" height="125" onMouseOver={e => (e.currentTarget.src = "/images/monica_hover.gif")} onMouseOut={ e => changeImage(monicaClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} />
             </div>
         </div>
     )
