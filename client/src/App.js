@@ -19,7 +19,7 @@ function App() {
         
       <Sidebar toggleVideo={toggleVideo} />
       <Video selectedVideo={selectedVideo} />
-      <ChatBox />
+      <ChatBox selectedVideo={selectedVideo}/>
       <Topbar />
       <Jumpscare />
     </div>
