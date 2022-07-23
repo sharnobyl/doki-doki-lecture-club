@@ -1,5 +1,5 @@
 import './App.css';
-import ChatBox from './components/chatbox/chatbox.js'
+// import ChatBox from './components/chatbox/chatbox.js'
 import Sidebar from './components/sidebar/sidebar';
 import Video from './components/video/video.js'
 
@@ -12,8 +12,7 @@ function App() {
         </h1>
       </header>
 
-      <Sidebar></Sidebar>
-      <ChatBox />
+      <Sidebar className="sidebar"></Sidebar>
       <Video />
     </div>
     

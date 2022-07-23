@@ -4,7 +4,7 @@ import './chatbox.css'
 const ChatBox = () => {
     return (
         <div className='chatbox'>
-            charbox placeholder
+            chatbox placeholder
         </div>
     );
 }
