@@ -6,6 +6,7 @@
     border-radius: 5px;
     padding-bottom: 45px;
     background-color: rgb(246, 184, 220);
+    z-index: -1;
 }
 
 iframe {
