@@ -1,4 +1,4 @@
-import express, { application } from 'express';
+import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use('/lecture', lectureRoute);
 
 const PORT = process.env.PORT || 5000;
-const DB_URL = process.env.DB_URL || 'mongodb://localhost:27017/ddlc';
+const DB_URL = process.env.DB_URL || 'mongodb+srv://ddlc:ddlc123@cluster0.z91exps.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL)
     .then(() => {
