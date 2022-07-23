@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import './sidebar.css'
+import axios from 'axios';
 
 export default function Sidebar(prop) {
     // connect to backend
@@ -11,6 +12,15 @@ export default function Sidebar(prop) {
     const [course2Selected, setCourse2Selected] = useState(false)
     const [course3Selected, setCourse3Selected] = useState(false)
     const [course4Selected, setCourse4Selected] = useState(false)
+    const [lectureData, setLectureData] = useState(null)
+
+    useEffect(
+        () => {
+            axios.get("http://localhost:5000/lecture").then(function (response) {
+              setLectureData(response.data);
+            });
+          }, []
+      );
 
     const addOpenMenuClass = () => {
         if (clicked) {
