@@ -20,4 +20,5 @@ body {
 
 .viewSpace {
     display: flex;
+    flex-direction: row;
 }
