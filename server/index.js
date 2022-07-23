@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 
-import subjectRoute from './routes/subjects.js';
+import lectureRoute from './routes/lecture.js';
 
 const app = express();
 dotenv.config();
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/subject', subjectRoute);
+app.use('/lecture', lectureRoute);
 // app.use('/lecture', lectureRoute);
 // app.use('/comment', commentRoute);
 
