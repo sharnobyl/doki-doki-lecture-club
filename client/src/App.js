@@ -16,6 +16,7 @@ function App() {
       <ChatBox />
       <Video />
     </div>
+    
   );
 }
 
