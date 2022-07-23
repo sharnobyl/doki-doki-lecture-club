@@ -7,10 +7,10 @@ import Topbar from './components/topbar/topbar';
 
 function App() {
 
-  const [selectedVideo, setSelectedVideo] = useState(1);
+  const [selectedVideo, setSelectedVideo] = useState(0);
 
-  const toggleVideo = (videoId) => {
-    setSelectedVideo(videoId)
+  const toggleVideo = (lectureKey) => {
+    setSelectedVideo(lectureKey)
   }
 
   return (
