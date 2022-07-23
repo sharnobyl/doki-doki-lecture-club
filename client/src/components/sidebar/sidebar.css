@@ -40,7 +40,7 @@
     width: 30px;
     margin-top: 10px;
     border-radius: 3px;
-    transition: all 0.5s;
+    /* transition: all 0.5s; */
     color: white;
     display: flex;
     justify-content: center;
