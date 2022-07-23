@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Sidebar from './components/sidebar/sidebar';
 import Video from './components/video/video'
 import Topbar from './components/topbar/topbar';
+import Jumpscare from './components/jumpscare/jumpscare';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <div className='viewSpace'>
         <ChatBox />
       </div>
+      <Jumpscare />
     </div>
 
   );
