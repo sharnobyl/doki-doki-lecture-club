@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './video.css';
+import "./video.css";
 
 function Video() {
   const [display, setDisplay] = useState(
@@ -16,17 +16,15 @@ function Video() {
 
   return (
     <div>
-      <div class="video">
-        <iframe
-          src={display}
-          title="YouTube video player"
-          height="315"
-          width="560"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+      <iframe
+        src={display}
+        frameBorder="0"
+        title="YouTube video player"
+        height="315"
+        width="560"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >Browser not compatible</iframe>
       <button onClick={() => changeDisplay()}>switcheroo</button>
     </div>
   );
