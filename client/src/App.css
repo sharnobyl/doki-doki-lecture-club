@@ -19,7 +19,7 @@ body {
 }
 
 .sidebar {
-    position: fixed;
+    position: absolute;
     left: 0px;
     top: 100px;
 }
