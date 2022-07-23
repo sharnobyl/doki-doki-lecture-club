@@ -19,10 +19,8 @@ function App() {
 
       <Sidebar toggleVideo={toggleVideo} />
       <Video selectedVideo={selectedVideo} />
+      <ChatBox />
       <Topbar />
-      <div className='viewSpace'>
-        <ChatBox />
-      </div>
       <Jumpscare />
     </div>
 

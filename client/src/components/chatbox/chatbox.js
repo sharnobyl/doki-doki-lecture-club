@@ -3,9 +3,9 @@ import './chatbox.css'
 
 const ChatBox = () => {
     return (
-        <div className='chatbox'>
-            chatbox placeholder
-        </div>
+        <textarea className='chatbox'>
+           placeholder
+        </textarea>
     );
 }
 
