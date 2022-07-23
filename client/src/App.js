@@ -1,5 +1,6 @@
 import './App.css';
 import ChatBox from './components/chatbox/chatbox.js'
+import Video from './components/video/video.js'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         </h1>
       </header>
       <ChatBox />
+      <Video />
     </div>
   );
 }
