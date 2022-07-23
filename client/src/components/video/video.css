@@ -1,12 +1,31 @@
+.videoplayer {
+    margin-top: -45px;
+    margin-left: -290px;
+    border: 5px solid rgb(246, 184, 220);
+    border-radius: 5px;
+    padding-bottom: 45px;
+    background-color: rgb(246, 184, 220);
+}
+
 iframe {
     width: 70vw;
     height: calc(70vw/1.77);
-    position: absolute;
     left: 60px;
     top: 60px;
-    border: 5px solid pink;
-    border-radius: 5px;
-    margin-right: 500px;
+}
+
+h1 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+}
+
+#name {
+    float: left;
+    margin-left: 5px;
+}
+
+#subject {
+    float: right;
 }
 
 button {
