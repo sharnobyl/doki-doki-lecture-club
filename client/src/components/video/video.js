@@ -6,7 +6,12 @@ function Video() {
   );
 
   function changeDisplay() {
-    setDisplay("https://www.youtube.com/embed/nWtCTpJG6E4");
+    if (display === "https://www.youtube.com/embed/nWtCTpJG6E4") {
+      setDisplay("https://www.youtube.com/embed/Ev4_YB4HDrc");
+    } else {
+      setDisplay("https://www.youtube.com/embed/nWtCTpJG6E4")
+    }
+    
   }
 
   return (
@@ -20,7 +25,7 @@ function Video() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-      <button onClick={() => changeDisplay()}>change video</button>
+      <button onClick={() => changeDisplay()}>switcheroo</button>
     </div>
   );
 }
