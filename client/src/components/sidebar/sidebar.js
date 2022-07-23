@@ -3,8 +3,8 @@ import './sidebar.css'
 
 export default function Sidebar() {
     return (
-        <div class="side-bar">
-
+        <div className="side-bar">
+            hello
         </div>
 
     )

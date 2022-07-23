@@ -12,8 +12,7 @@ function App() {
         </h1>
       </header>
 
-      <Sidebar></Sidebar>
-      {/* <ChatBox /> */}
+      <Sidebar className="sidebar"></Sidebar>
       <Video />
     </div>
   );
