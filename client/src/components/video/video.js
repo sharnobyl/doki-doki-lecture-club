@@ -23,7 +23,7 @@ function Video() {
         height="315"
         width="560"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
       >Browser not compatible</iframe>
       <button onClick={() => changeDisplay()}>switcheroo</button>
     </div>
