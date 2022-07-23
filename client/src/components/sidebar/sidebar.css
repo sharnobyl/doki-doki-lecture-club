@@ -25,10 +25,29 @@
 }
 
 .menuBtn:hover {
-    background-color: rgb(221, 137, 186);
+    background-color: rgb(167, 102, 140);
 }
 
 .menuBtn:active {
+    left: 0.5px;
+    top: 0.5px;
+}
+
+.classBtn {
+    position: relative;
+    background-color: rgb(221, 137, 186);
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    border-radius: 3px;
+    transition: 0.2s all;
+}
+
+.classBtn:hover {
+    background-color: rgb(167, 102, 140);
+}
+
+.classBtn:active {
     left: 0.5px;
     top: 0.5px;
 }
