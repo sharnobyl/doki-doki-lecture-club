@@ -1,11 +1,13 @@
 .chatbox {
     position: absolute;
-    right: 0px;
-    top: 60px;
-    height: 100%;
-    width: 24vw;
-    background-color: aqua;
-    z-index: -1;
-    text-align: center;
-    padding-top: 100px;
+    right: 10px;
+    top: 65px;
+    height: calc(70vw/1.77 + 90px);
+    width: 23vw;
+    background-color: white;
+    
+    text-align: left;
+    border: 5px solid rgb(246, 184, 220);
+    border-radius: 5px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
