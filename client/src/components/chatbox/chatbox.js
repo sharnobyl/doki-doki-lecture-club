@@ -3,9 +3,9 @@ import './chatbox.css'
 
 const ChatBox = () => {
     const [messages, setMessages] = useState([
-        { id: 1, message: 'Austria' },
-        { id: 2, message: 'Germany' },
-        { id: 3, message: 'Austria' },
+        { id: 1, message: 'Austria', user: '232'},
+        { id: 2, message: 'Germany', user: '24322' },
+        { id: 3, message: 'Austria', user: '235322' },
     ]
     )
     const [listElements, setListElements] = useState([React.createElement('li',{},'chat start')])
@@ -17,6 +17,7 @@ const ChatBox = () => {
         })
     }
     )
+
 
     return (
         <div className="chatbox">
