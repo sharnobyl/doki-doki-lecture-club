@@ -16,7 +16,7 @@ function Video() {
 
   return (
     <div>
-      <div class="video-container">
+      <div class="video">
         <iframe
           src={display}
           title="YouTube video player"
