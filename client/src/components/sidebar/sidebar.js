@@ -130,7 +130,7 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn3"));
             ReactDOM.render(``, document.getElementById("btn4"));
             ReactDOM.render(``, document.getElementById("btn5"));
-            ReactDOM.render(`${lectureData[4].lectureTitle}`, document.getElementById("btn6"));
+            ReactDOM.render(`${lectureData[5].lectureTitle}`, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
             ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
@@ -145,7 +145,7 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn4"));
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
-            ReactDOM.render(`${lectureData[4].lectureTitle}`, document.getElementById("btn7"));
+            ReactDOM.render(`${lectureData[6].lectureTitle}`, document.getElementById("btn7"));
             ReactDOM.render(``, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
@@ -160,7 +160,7 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn5"));
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
-            ReactDOM.render(`${lectureData[4].lectureTitle}`, document.getElementById("btn8"));
+            ReactDOM.render(`${lectureData[7].lectureTitle}`, document.getElementById("btn8"));
             ReactDOM.render(``, document.getElementById("btn9"));
         }
     }
@@ -175,7 +175,7 @@ export default function Sidebar(prop) {
             ReactDOM.render(``, document.getElementById("btn6"));
             ReactDOM.render(``, document.getElementById("btn7"));
             ReactDOM.render(``, document.getElementById("btn8"));
-            ReactDOM.render(`${lectureData[4].lectureTitle}`, document.getElementById("btn9"));
+            ReactDOM.render(`${lectureData[8].lectureTitle}`, document.getElementById("btn9"));
         }
     }
 
