@@ -35,11 +35,19 @@ export default function Topbar() {
     function changeImage(chibiClick, chibiID) {
         var link = "/images/";
         if (chibiClick) {
+            scareNatsuki();
             document.getElementById(chibiID).src = link.concat(chibiID.concat("_hover.gif"));
         } else {
             document.getElementById(chibiID).src = link.concat(chibiID.concat(".png"));
         }
     }
+
+    //jumpscares
+    function scareNatsuki(){
+        //document.getElementById("natsukiScare").style.visibility = "visible";
+
+    }
+    
 
     return (
         <div className='topbar'>
@@ -52,6 +60,8 @@ export default function Topbar() {
                 <img src="/images/sayori.png" id="sayori" height="125" onMouseOver={e => (e.currentTarget.src = "/images/sayori_hover.gif")} onMouseOut={e => changeImage(sayoriClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} alt="sayori" />
                 <img src="/images/natsuki.png" id="natsuki" height="125" onMouseOver={e => (e.currentTarget.src = "/images/natsuki_hover.gif")} onMouseOut={e => changeImage(natsukiClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} alt="natsuki" />
                 <img src="/images/yuri.png" id="yuri" height="125" onMouseOver={e => (e.currentTarget.src = "/images/yuri_hover.gif")} onMouseOut={e => changeImage(yuriClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} alt="yuri" />
+            </div>
+            <div className='chibiScare' id="natsukiScare" style={{visibility:"hidden"}}>
             </div>
         </div>
     )
