@@ -4,6 +4,7 @@ import axios from "axios";
 
 function Video(props) {
   const subject = "life"; // placeholder
+  const [isLoading, setIsLoading] = useState(true);
   const [lectureData, setLectureData] = useState([
     {
       lectureLink: "https://www.youtube.com/embed/gPPxfPThq20",
@@ -11,18 +12,22 @@ function Video(props) {
   ]);
 
   useEffect(
-    () =>
-      function fetchData() {
+    () => {
         axios.get("http://localhost:5000/lecture").then(function (response) {
           setLectureData(response.data);
+          setIsLoading(false);
         });
-      }
+      }, []
   );
+
+  if (isLoading) {
+    return <p>Page loading</p>
+  }
 
   return (
     <div class="videoplayer">
       <iframe
-        src={lectureData[0].lectureLink}
+        src={lectureData[props.selectedVideo].lectureLink}
         frameBorder="0"
         title="YouTube video player"
         height="315"
@@ -34,7 +39,7 @@ function Video(props) {
         Browser not compatible
       </iframe>
       <div class="title">
-        <h1 id="name">{lectureData[0].lectureTitle}</h1>
+        <h1 id="name">{lectureData[props.selectedVideo].lectureTitle}</h1>
         <h1 id="subject">{subject}</h1>
       </div>
     </div>

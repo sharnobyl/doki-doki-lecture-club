@@ -20,7 +20,6 @@ function App() {
       <Video selectedVideo={selectedVideo} />
       <Topbar />
       <div className='viewSpace'>
-        <Video />
         <ChatBox />
       </div>
     </div>
