@@ -22,63 +22,63 @@ export default function Sidebar(prop) {
 
     const addOpenMenuClass = () => {
         if (clicked) {
-            ReactDOM.render(`1`, document.getElementById("btn1"));
-            ReactDOM.render(`2`, document.getElementById("btn2"));
-            ReactDOM.render(`3`, document.getElementById("btn3"));
-            ReactDOM.render(`4`, document.getElementById("btn4"));
+            ReactDOM.render(``, document.getElementById("btn1"));
+            ReactDOM.render(``, document.getElementById("btn2"));
+            ReactDOM.render(``, document.getElementById("btn3"));
+            ReactDOM.render(``, document.getElementById("btn4"));
         } else {
-            ReactDOM.render(`1. ${lectureData[0].lectureTitle}`, document.getElementById("btn1"));
-            ReactDOM.render(`2. ${lectureData[0].lectureTitle}`, document.getElementById("btn2"));
-            ReactDOM.render(`3. ${lectureData[0].lectureTitle}`, document.getElementById("btn3"));
-            ReactDOM.render(`4. ${lectureData[0].lectureTitle}`, document.getElementById("btn4"));
+            ReactDOM.render(`${lectureData[0].lectureTitle}`, document.getElementById("btn1"));
+            ReactDOM.render(`${lectureData[1].lectureTitle}`, document.getElementById("btn2"));
+            ReactDOM.render(`${lectureData[2].lectureTitle}`, document.getElementById("btn3"));
+            ReactDOM.render(`${lectureData[3].lectureTitle}`, document.getElementById("btn4"));
         }
         setClicked(!clicked)
     }
 
     const addCourseName1 = () => {
         if (!clicked) {
-            ReactDOM.render(`1. ${lectureData[0].lectureTitle}`, document.getElementById("btn1"));
-            ReactDOM.render(`2`, document.getElementById("btn2"));
-            ReactDOM.render(`3`, document.getElementById("btn3"));
-            ReactDOM.render(`4`, document.getElementById("btn4"));
+            ReactDOM.render(`${lectureData[0].lectureTitle}`, document.getElementById("btn1"));
+            ReactDOM.render(``, document.getElementById("btn2"));
+            ReactDOM.render(``, document.getElementById("btn3"));
+            ReactDOM.render(``, document.getElementById("btn4"));
         }
 
     }
 
     const addCourseName2 = () => {
         if (!clicked) {
-            ReactDOM.render(`1`, document.getElementById("btn1"));
-            ReactDOM.render(`2. ${lectureData[1].lectureTitle}`, document.getElementById("btn2"));
-            ReactDOM.render(`3`, document.getElementById("btn3"));
-            ReactDOM.render(`4`, document.getElementById("btn4"));
+            ReactDOM.render(``, document.getElementById("btn1"));
+            ReactDOM.render(`${lectureData[1].lectureTitle}`, document.getElementById("btn2"));
+            ReactDOM.render(``, document.getElementById("btn3"));
+            ReactDOM.render(``, document.getElementById("btn4"));
         }
 
     }
 
     const addCourseName3 = () => {
         if (!clicked) {
-            ReactDOM.render(`1`, document.getElementById("btn1"));
-            ReactDOM.render(`2`, document.getElementById("btn2"));
-            ReactDOM.render(`3. ${lectureData[2].lectureTitle}`, document.getElementById("btn3"));
-            ReactDOM.render(`4`, document.getElementById("btn4"));
+            ReactDOM.render(``, document.getElementById("btn1"));
+            ReactDOM.render(``, document.getElementById("btn2"));
+            ReactDOM.render(`${lectureData[2].lectureTitle}`, document.getElementById("btn3"));
+            ReactDOM.render(``, document.getElementById("btn4"));
         }
     }
 
     const addCourseName4 = () => {
         if (!clicked) {
-            ReactDOM.render(`1`, document.getElementById("btn1"));
-            ReactDOM.render(`2`, document.getElementById("btn2"));
-            ReactDOM.render(`3`, document.getElementById("btn3"));
-            ReactDOM.render(`4. ${lectureData[3].lectureTitle}`, document.getElementById("btn4"));
+            ReactDOM.render(``, document.getElementById("btn1"));
+            ReactDOM.render(``, document.getElementById("btn2"));
+            ReactDOM.render(``, document.getElementById("btn3"));
+            ReactDOM.render(`${lectureData[3].lectureTitle}`, document.getElementById("btn4"));
         }
     }
 
     const removeCourseName = () => {
         if (!clicked) {
-            ReactDOM.render(`1`, document.getElementById("btn1"));
-            ReactDOM.render(`2`, document.getElementById("btn2"));
-            ReactDOM.render(`3`, document.getElementById("btn3"));
-            ReactDOM.render(`4`, document.getElementById("btn4"));
+            ReactDOM.render(``, document.getElementById("btn1"));
+            ReactDOM.render(``, document.getElementById("btn2"));
+            ReactDOM.render(``, document.getElementById("btn3"));
+            ReactDOM.render(``, document.getElementById("btn4"));
         }
 
     }
@@ -120,16 +120,16 @@ export default function Sidebar(prop) {
             <div className={clicked ? "menuBtn menuBtnOpen" : "menuBtn"} onClick={addOpenMenuClass}></div>
 
             <div className={course1Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName1} onMouseLeave={removeCourseName}>
-                <div id="btn1" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse1}>1</div>
+                <div id="btn1" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse1}></div>
             </div>
             <div className={course2Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName2} onMouseLeave={removeCourseName}>
-                <div id="btn2" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse2}>2</div>
+                <div id="btn2" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse2}></div>
             </div>
             <div className={course3Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName3} onMouseLeave={removeCourseName}>
-                <div id="btn3" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse3}>3</div>
+                <div id="btn3" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse3}></div>
             </div>
             <div className={course4Selected ? 'classCont selected' : 'classCont'} onMouseEnter={addCourseName4} onMouseLeave={removeCourseName}>
-                <div id="btn4" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse4}>4</div>
+                <div id="btn4" className={clicked ? "classBtn classBtnOpen" : "classBtn"} onClick={selectCourse4}></div>
             </div>
         </div >
 

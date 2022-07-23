@@ -36,7 +36,7 @@
 .classBtn {
     position: relative;
     background-color: rgb(221, 137, 186);
-    height: 30px;
+    height: 40px;
     width: 30px;
     margin-top: 10px;
     border-radius: 3px;
@@ -44,6 +44,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
 
 .classBtn:hover {
@@ -62,7 +63,7 @@
 
 .classBtnOpen {
     width: 180px;
-    height: 100px;
+    height: 80px;
 }
 
 .menuBtnOpen {
@@ -74,5 +75,5 @@
 }
 
 .selected div {
-    color: red;
+    color: black;
 }
