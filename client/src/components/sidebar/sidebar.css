@@ -73,3 +73,7 @@
 .menuOpen {
     width: 200px;
 }
+
+.selected div {
+    color: red;
+}
