@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import './chatbox.css'
 
 const ChatBox = () => {
@@ -10,19 +10,17 @@ const ChatBox = () => {
     )
     const [listElements, setListElements] = useState([React.createElement('li',{},'chat start')])
 
-    const createList= () => {
-        const list = React.createElement('ul',{},[])
+    useEffect(
+        () => {
         messages.forEach((message) => {
-            const listElement = React.createContext('li',{}, message)
-            listElement.textContent = message
-            list.appendChild(listElement)
+            setListElements({listElements : [...listElements, React.createElement('li',{}, message)]})
         })
-        return list;
     }
+    )
 
     return (
         <div className="chatbox">
-            {listElements}
+            <ul>{listElements}</ul>
         </div>
     );
 }
