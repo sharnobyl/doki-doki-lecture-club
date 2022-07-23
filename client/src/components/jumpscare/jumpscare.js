@@ -43,7 +43,7 @@ export default function Jumpscare() {
 
 
                 <div className={isVisible ? 'visible' : 'hidden' }> 
-                    <img src="/images/just-monica.png" id='monicaScare' height='100%' width='100%' />
+                    <img src="/images/just-monica.png" id='monicaScare' height='100%' width='100%' alt='monica jumpscare'/>
                 </div>
             </span>
 
