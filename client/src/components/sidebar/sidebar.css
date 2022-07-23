@@ -2,11 +2,30 @@
     position: fixed;
     top: 50px;
     left: 0px;
-    background-color: black;
+    background-color: #f6b8dc;
     height: 100%;
     width: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+}
+
+.menuBtn {
+    position: relative;
+    background-color: #f389c7;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    border-radius: 15px;
+    transition: 0.2s all;
+}
+
+.menuBtn:hover {
+    background-color: #ef84c3;
+}
+
+.menuBtn:active {
+    left: 0.5px;
+    top: 0.5px;
 }
