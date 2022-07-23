@@ -6,7 +6,7 @@ export default function Sidebar() {
     const [clicked, setClicked] = useState(false);
 
     const addOpenMenuClass = () => {
-        setClicked(true);
+        setClicked(!clicked);
     }
 
     return (

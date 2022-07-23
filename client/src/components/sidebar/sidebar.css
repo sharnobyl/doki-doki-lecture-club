@@ -10,6 +10,7 @@
     justify-content: flex-start;
     align-items: center;
     transition: all 0.2s;
+    z-index: 1;
 }
 
 .menuBtn {
@@ -32,5 +33,5 @@
 }
 
 .menuOpen {
-    width: 100px;
+    width: 200px;
 }
