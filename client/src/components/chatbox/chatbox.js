@@ -3,7 +3,7 @@ import './chatbox.css'
 
 const ChatBox = () => {
     return (
-        <div>
+        <div className='chatbox'>
             charbox placeholder
         </div>
     );

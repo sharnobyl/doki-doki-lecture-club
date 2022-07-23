@@ -1,5 +1,6 @@
 import './App.css';
 import ChatBox from './components/chatbox/chatbox.js'
+import Sidebar from './components/sidebar/sidebar';
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
           doki doki dunking on u
         </h1>
       </header>
+
+      <Sidebar></Sidebar>
       <ChatBox />
     </div>
   );
