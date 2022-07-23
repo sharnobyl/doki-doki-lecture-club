@@ -29,8 +29,6 @@ function Video(id) {
       function fetchData() {
         axios.get("http://localhost:5000/lecture").then(function (response) {
           setLectureData(response.data);
-          console.log(lectureData)
-          console.log(lectureData[0].lectureLink)
         });
       }
   );
