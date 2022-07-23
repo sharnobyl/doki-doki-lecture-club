@@ -1,5 +1,7 @@
 .side-bar {
     position: absolute;
+    top: 50px;
+    left: 0px;
     background-color: black;
     height: 100%;
     width: 70px;
