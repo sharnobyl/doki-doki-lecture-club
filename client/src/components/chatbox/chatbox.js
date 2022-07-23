@@ -9,7 +9,7 @@ const ChatBox = () => {
     ]
     )
 
-    function createList() {
+    const createList= () => {
         const list = React.createElement('ul',{},[])
         messages.forEach((message) => {
             const listElement = React.createContext('li',{}, message)
@@ -21,7 +21,7 @@ const ChatBox = () => {
 
     return (
         <div className="chatbox">
-            {createList()}
+            {createList}
         </div>
     );
 }
