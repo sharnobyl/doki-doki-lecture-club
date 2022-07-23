@@ -46,6 +46,7 @@ function Video(id) {
           width="560"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+          scrolling="0"
         >
           Browser not compatible
         </iframe>
