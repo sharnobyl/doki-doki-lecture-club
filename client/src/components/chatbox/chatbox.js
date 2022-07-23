@@ -24,8 +24,7 @@ const ChatBox = (props) => {
     const displayMessage = (message) => {
         return (
             <div class='messages'>
-                <p>{message.timeStampSeconds}</p>
-                <p>{message.userName}: </p>
+                <p>{message.timeStampSeconds} {message.userName}: </p>
                 <p>{message.commentMessage}</p>
             </div>
         )
