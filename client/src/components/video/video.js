@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./video.css";
 import axios from "axios";
 
-function Video(id) {
+function Video(videoId) {
   const subject = "life"; // placeholder
   const [lectureData, setLectureData] = useState([
     {
