@@ -17,7 +17,7 @@ export default function Sidebar() {
     }
 
     const addCourseName1 = () => {
-        if (course1Clicked) {
+        if (course1Clicked && clicked) {
             ReactDOM.render(`1. ${name}`, document.getElementById("btn1"));
         } else {
             ReactDOM.render(`1`, document.getElementById("btn1"));
@@ -27,7 +27,7 @@ export default function Sidebar() {
     }
 
     const addCourseName2 = () => {
-        if (course2Clicked) {
+        if (course2Clicked && clicked) {
             ReactDOM.render(`2. ${name}`, document.getElementById("btn2"));
         } else {
             ReactDOM.render(`2`, document.getElementById("btn2"));
@@ -37,7 +37,7 @@ export default function Sidebar() {
     }
 
     const addCourseName3 = () => {
-        if (course3Clicked) {
+        if (course3Clicked && clicked) {
             ReactDOM.render(`3. ${name}`, document.getElementById("btn3"));
         } else {
             ReactDOM.render(`3`, document.getElementById("btn3"));
@@ -46,7 +46,7 @@ export default function Sidebar() {
     }
 
     const addCourseName4 = () => {
-        if (course4Clicked) {
+        if (course4Clicked && clicked) {
             ReactDOM.render(`4. ${name}`, document.getElementById("btn4"));
         } else {
             ReactDOM.render(`4`, document.getElementById("btn4"));
