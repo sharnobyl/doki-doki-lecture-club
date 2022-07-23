@@ -7,9 +7,9 @@ import Topbar from './components/topbar/topbar';
 function App() {
   return (
     <div className="App">
-      <Topbar />
       <Sidebar />
       <Video />
+      <Topbar />
     </div>
     
   );
