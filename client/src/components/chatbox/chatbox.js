@@ -35,6 +35,7 @@ const ChatBox = (props) => {
     return (
         <div className='chatbox'>
             {display}
+            <input></input>
         </div>
     )
 }
