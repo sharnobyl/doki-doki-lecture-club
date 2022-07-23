@@ -2,7 +2,7 @@
     position: fixed;
     top: 50px;
     left: 0px;
-    background-color: #f6b8dc;
+    background-color: rgb(246, 184, 220);
     height: 100%;
     width: 50px;
     display: flex;
@@ -10,11 +10,13 @@
     justify-content: flex-start;
     align-items: center;
     transition: all 0.2s;
+    z-index: 1;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 }
 
 .menuBtn {
     position: relative;
-    background-color: #f389c7;
+    background-color: rgb(221, 137, 186);
     height: 30px;
     width: 30px;
     margin-top: 10px;
@@ -23,7 +25,7 @@
 }
 
 .menuBtn:hover {
-    background-color: #ef84c3;
+    background-color: rgb(166, 25, 128);
 }
 
 .menuBtn:active {
@@ -31,6 +33,10 @@
     top: 0.5px;
 }
 
+.menuBtnOpen {
+    width: 180px;
+}
+
 .menuOpen {
-    width: 100px;
+    width: 200px;
 }
