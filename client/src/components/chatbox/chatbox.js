@@ -10,13 +10,13 @@ const ChatBox = () => {
 
     // const [listElements, setListElements] = useState([React.createElement('li',{},'chat start')])
 
-    useEffect(
-        () => {
-        messages.forEach((message) => {
-            // setListElements({listElements : [...listElements, React.createElement('li',{}, message)]})
-        })
-    }
-    )
+    // useEffect(
+    //     () => {
+    //     messages.forEach((message) => {
+    //         // setListElements({listElements : [...listElements, React.createElement('li',{}, message)]})
+    //     })
+    // }
+    // )
 
     const displayMessage = (message) => {
         return(
@@ -26,10 +26,11 @@ const ChatBox = () => {
     }
 
 
-    return 
-    <div>
+    return (
+    <div className='chatbox'>
         {messages.map(m => displayMessage(m))}
-    </div>;
+    </div>
+    )
 }
 
 export default ChatBox
