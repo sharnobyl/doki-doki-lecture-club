@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./video.css";
 import axios from "axios";
-import YouTube,{YouTubeProps} from 'react-youtube'
+import YouTube from 'react-youtube'
 
 function Video(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +17,7 @@ function Video(props) {
           setLectureData(response.data);
           setIsLoading(false);
         });
-      }, []
+      }
   );
 
   if (isLoading) {
@@ -29,6 +29,7 @@ function Video(props) {
       <YouTube
         id="YouTube"
         videoId={lectureData[props.selectedVideo].lectureLink}
+        onStateChange={props.togglePlaying}
       >
         Browser not compatible
       </YouTube>

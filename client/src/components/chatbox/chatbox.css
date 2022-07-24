@@ -9,7 +9,7 @@
     border: 5px solid rgb(246, 184, 220);
     border-radius: 5px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    overflow-y: scroll;
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
