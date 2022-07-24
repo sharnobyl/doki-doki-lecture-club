@@ -54,12 +54,11 @@ const ChatBox = (props) => {
     const displayMessage = (message) => {
         return (
             <div class='messages'>
-                <p>{message.timeStampSeconds} {message.userName}: </p>
-                <p>{message.commentMessage}</p>
+                <p id='titlebar'>{message.userName}: </p>
+                <p id='commentbar'>{message.commentMessage}</p>
             </div>
         )
     }
-
 
 
     const submitComment = () => {

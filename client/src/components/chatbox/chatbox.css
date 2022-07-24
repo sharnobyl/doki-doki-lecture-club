@@ -23,6 +23,7 @@ p {
 
 .messages {
     justify-content: space-between;
+    padding: 5px;
 }
 
 form {
@@ -63,4 +64,22 @@ form {
 #submitComment:active {
     left: 0.5px;
     top: 0.5px;
+}
+
+#titlebar {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color:rgb(224, 78, 163);
+    padding: 5px 10px 5px;
+}
+
+#commentbar {
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(246, 184, 220);
+    padding: 5px 10px 5px;
+    font-size: small;
+    color: rgb(0, 0, 0);
 }
