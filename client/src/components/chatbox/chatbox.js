@@ -52,16 +52,24 @@ const ChatBox = (props) => {
             </div>
         )
     }
+
     const [text, setText] = useState('')
+    const [currentTime, setCurrentTime] = useState(0)
+    const [lectureId, setLectureId] = useState('')
+    const [comment, setComment] = useState({})
 
     const submitComment = () => {
+        setLectureId(props.selectedVideo._id)
+        setComment({
+            userName: 'Benus Kazi',
+            commentMessage: `${text}`,
+            timeStampSeconds: `${currentTime}`
+        })
 
-        // make an object comment
-
-
+        console.log(comment)
+        axios.post(`http://localhost:5000/lecture/62dbb4fe06b882ec1327cfdc/comment`, comment)
         setText('')
     }
-
 
     const updateTextbox = (event) => {
         setText(event.target.value)
