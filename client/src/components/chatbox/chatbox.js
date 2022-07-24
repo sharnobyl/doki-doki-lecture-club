@@ -11,20 +11,9 @@ const ChatBox = (props) => {
         },
     ]);
     const [display, setDisplay] = useState(null)
-    const [time, setTime] = useState(0);
-    const [active, setActive] = useState(false);
-    const [text, setText] = useState('')
     const [currentTime, setCurrentTime] = useState(0)
+    const [text, setText] = useState('')
     const [lectureId, setLectureId] = useState('')
-
-    function toggle() {
-        setActive(!active);
-    }
-
-    function reset() {
-        setTime(0);
-        setActive(false);
-    }
 
     useEffect(
         () => {
@@ -36,20 +25,6 @@ const ChatBox = (props) => {
             setDisplay(messages.map(m => displayMessage(m)))
         }, [messages, props.selectedVideo]
     );
-
-
-
-    useEffect(() => {
-        let interval = null;
-        if (active) {
-            interval = setInterval(() => {
-                setTime(time => time + 1);
-            }, 1000);
-        } else if (!active && time !== 0) {
-            clearInterval(interval);
-        }
-        return () => clearInterval(interval);
-    }, [active, time]);
 
     const displayMessage = (message) => {
         return (
