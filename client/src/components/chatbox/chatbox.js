@@ -3,13 +3,9 @@ import './chatbox.css'
 import axios from 'axios'
 
 const ChatBox = (props) => {
-    const [messages, setMessages] = useState([
-        {
-            messages: [{ timeStampSeconds: 1, commentMessage: 'Austria', userName: '232' },
-            { timeStampSeconds: 2, commentMessage: 'Germany', userName: '24322' },
-            { timeStampSeconds: 3, commentMessage: 'Austria', userName: '235322' }]
-        },
-    ]);
+    const userName = 'benuz kaz'
+
+    const [messages, setMessages] = useState([{ messages: [] }]);
     const [display, setDisplay] = useState(null)
     const [text, setText] = useState('')
     const [lectureId, setLectureId] = useState('')
@@ -34,13 +30,15 @@ const ChatBox = (props) => {
         )
     }
 
-
     const submitComment = () => {
         const comment = {
-            userName: 'Benus Kazi',
+            userName: `${userName}`,
             commentMessage: `${text}`,
         }
-        axios.post(`http://localhost:5000/lecture/${lectureId}/comment`, comment)
+        if (text.length !== 0) {
+            axios.post(`http://localhost:5000/lecture/${lectureId}/comment`, comment)
+
+        }
         setText('')
     }
 
