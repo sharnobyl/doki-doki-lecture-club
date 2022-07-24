@@ -9,7 +9,7 @@
     border: 5px solid rgb(246, 184, 220);
     border-radius: 5px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    overflow-y: hidden;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -70,12 +70,11 @@ form {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: rgb(255, 255, 255);
-    color:rgb(224, 78, 163);
+    color: rgb(224, 78, 163);
     padding: 5px 10px 5px;
 }
 
 #commentbar {
-
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: rgb(246, 184, 220);
