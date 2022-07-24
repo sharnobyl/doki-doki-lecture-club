@@ -12,7 +12,7 @@ export const getLectures = async (req, res) => {
 
 export const commentLecture = async (req, res) => {
   const { id } = req.params;
-  const { comment } = req.body;
+  const comment = req.body;
 
   try {
     const lecture = await Lecture.findById(id);
