@@ -74,7 +74,7 @@ export default function Topbar() {
                 <img src="/images/yuri.png" id="yuri" height="125" onMouseOver={e => (e.currentTarget.src = "/images/yuri_hover.gif")} onMouseOut={e => changeImage(yuriClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} alt="yuri" />
             </div>
             <div className='chibiScare' id ='divScare' style={{visibility:"hidden"}}>
-                <img src="/images/blank" id="imgScare" height='100vh' width='100vw'/>
+                <img src="/images/blank" id="imgScare" height='100vh' width='100vw' alt=' ' />
             </div>
         </div>
     )
