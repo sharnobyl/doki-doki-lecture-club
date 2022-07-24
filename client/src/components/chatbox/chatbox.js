@@ -11,7 +11,6 @@ const ChatBox = (props) => {
         },
     ]);
     const [display, setDisplay] = useState(null)
-    const [currentTime, setCurrentTime] = useState(0)
     const [text, setText] = useState('')
     const [lectureId, setLectureId] = useState('')
 
@@ -21,7 +20,7 @@ const ChatBox = (props) => {
                 setMessages(response.data[props.selectedVideo].comments)
                 setLectureId(response.data[props.selectedVideo]._id)
             });
-
+            
             setDisplay(messages.map(m => displayMessage(m)))
         }, [messages, props.selectedVideo]
     );
@@ -40,7 +39,6 @@ const ChatBox = (props) => {
         const comment = {
             userName: 'Benus Kazi',
             commentMessage: `${text}`,
-            timeStampSeconds: `${currentTime}`
         }
         axios.post(`http://localhost:5000/lecture/${lectureId}/comment`, comment)
         setText('')
