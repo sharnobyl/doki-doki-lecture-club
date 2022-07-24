@@ -11,15 +11,17 @@ export default function Jumpscare() {
     function triggerScare() {
 
         var time = Math.floor(500*Math.random());
-    
+        var glitch = new Audio('/images/glitch.wav')
+
         if (Math.random() > 0.8) {
             document.getElementById('monicaScare').src = "/images/just-monica-scare.png";
         } else {
             document.getElementById('monicaScare').src = "/images/just-monica.png";
         }
         
-    
+
         setVisible(true);
+        glitch.play();
         
         setTimeout(function() {
             setVisible(false);
@@ -43,7 +45,7 @@ export default function Jumpscare() {
 
 
                 <div className={isVisible ? 'visible' : 'hidden' }> 
-                    <img src="/images/just-monica.png" id='monicaScare' height='100%' width='100%' alt='monica jumpscare'/>
+                    <img src="/images/just-monica.png" id='monicaScare' height='100%' alt='monica jumpscare'/>
                 </div>
             </span>
         </div>

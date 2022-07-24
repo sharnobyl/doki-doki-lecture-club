@@ -12,13 +12,12 @@ export const getLectures = async (req, res) => {
 
 export const commentLecture = async (req, res) => {
   const { id } = req.params;
-  const { comment } = req.body;
+  const comment = req.body;
 
   try {
     const lecture = await Lecture.findById(id);
 
     lecture.comments.push(comment);
-    console.log("post request");
     const updatedLecture = await Lecture.findByIdAndUpdate(id, lecture, {
       new: true,
     });
@@ -29,14 +28,7 @@ export const commentLecture = async (req, res) => {
   }
 };
 
-export const createSubject = async (req, res) => {};
+// WIP
+// export const createLecture = async (req, res) => {};
 
-export const deleteSubject = async (req, res) => {};
-
-export const addLectureToSubject = async (req, res) => {
-  // PATCH REQUEST
-};
-
-export const deleteLectureFromSubject = async (req, res) => {
-  // PATCH REQUEST (Because we are updating the lectures list in subjects)
-};
+// export const deleteLecture = async (req, res) => {};
