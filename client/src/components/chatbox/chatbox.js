@@ -3,11 +3,12 @@ import './chatbox.css'
 import axios from 'axios'
 
 const ChatBox = (props) => {
-    const userName = 'benuz kaz'
+    // const userName = 'benuz kaz'
 
     const [messages, setMessages] = useState([{ messages: [] }]);
     const [display, setDisplay] = useState(null)
     const [text, setText] = useState('')
+    const [userName, setUsername] = useState('')
     const [lectureId, setLectureId] = useState('')
 
     useEffect(
@@ -35,7 +36,7 @@ const ChatBox = (props) => {
             userName: `${userName}`,
             commentMessage: `${text}`,
         }
-        if (text.length !== 0) {
+        if (text.length !== 0 && userName.length !== 0) {
             axios.post(`http://localhost:5000/lecture/${lectureId}/comment`, comment)
 
         }
@@ -46,11 +47,18 @@ const ChatBox = (props) => {
         setText(event.target.value)
     }
 
+    const updateUsername = (event) => {
+        setUsername(event.target.value)
+    }
+
     return (
         <div className='chatbox'>
             {display}
             <form>
-                <input className="textInput" onChange={updateTextbox} value={text} onKeyPress={e => {
+                <input className="userNameInput" onChange={updateUsername} placeholder="Enter your username" value={userName} onKeyPress={e => {
+                    if (e.key === 'Enter') e.preventDefault();
+                }}></input>
+                <input className="textInput" onChange={updateTextbox} placeholder="Share your thoughts!" value={text} onKeyPress={e => {
                     if (e.key === 'Enter') e.preventDefault();
                 }}></input>
                 <div id="submitComment" onClick={submitComment}>Submit</div>

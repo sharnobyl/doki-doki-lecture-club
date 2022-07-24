@@ -35,7 +35,8 @@ form {
     padding: 5px;
 }
 
-.textInput {
+.textInput,
+.userNameInput {
     height: 50px;
     outline: none;
     text-align: left;
