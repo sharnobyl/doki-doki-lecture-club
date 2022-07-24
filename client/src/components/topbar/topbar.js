@@ -73,8 +73,13 @@ export default function Topbar() {
                 <img src="/images/natsuki.png" id="natsuki" height="125" onMouseOver={e => (e.currentTarget.src = "/images/natsuki_hover.gif")} onMouseOut={e => changeImage(natsukiClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} alt="natsuki" />
                 <img src="/images/yuri.png" id="yuri" height="125" onMouseOver={e => (e.currentTarget.src = "/images/yuri_hover.gif")} onMouseOut={e => changeImage(yuriClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} alt="yuri" />
             </div>
+<<<<<<< HEAD
             <div className='chibiScare' id='divScare' style={{ visibility: "hidden" }}>
                 <img src="/images/blank" id="imgScare" height='100vh' width='100vw' alt="jumpscare" />
+=======
+            <div className='chibiScare' id ='divScare' style={{visibility:"hidden"}}>
+                <img src="/images/blank" id="imgScare" height='100vh' width='100vw' alt=' ' />
+>>>>>>> afb91f7a5da6a33e81363321f53df594f41e19e5
             </div>
         </div>
     )
