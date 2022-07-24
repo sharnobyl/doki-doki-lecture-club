@@ -29,7 +29,8 @@ function Video(props) {
       <YouTube
         id="YouTube"
         videoId={lectureData[props.selectedVideo].lectureLink}
-        onStateChange={props.togglePlaying}
+        onPlay={props.togglePlaying}
+        onPause={props.togglePlaying}
       >
         Browser not compatible
       </YouTube>
