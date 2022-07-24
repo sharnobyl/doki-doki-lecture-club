@@ -21,10 +21,10 @@ function App() {
 
   return (
     <div className="App">
-        
+
       <Sidebar toggleVideo={toggleVideo} />
-      <Video selectedVideo={selectedVideo} togglePlaying={togglePlaying}/>
-      <ChatBox selectedVideo={selectedVideo} playing={isPlaying}/>
+      <Video selectedVideo={selectedVideo} togglePlaying={togglePlaying} />
+      <ChatBox selectedVideo={selectedVideo} playing={isPlaying} />
       <Topbar />
       <Jumpscare />
     </div>
