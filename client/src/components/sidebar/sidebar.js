@@ -350,7 +350,9 @@ export default function Sidebar(prop) {
 
     return (
         <div className={clicked ? "sidebar menuOpen" : "sidebar"} >
-            <div className={clicked ? "menuBtn menuBtnOpen" : "menuBtn"} onClick={addOpenMenuClass}></div>
+            <div className={clicked ? "menuBtn menuBtnOpen" : "menuBtn"} onClick={addOpenMenuClass}>
+                <img id='arrow' src='/images/arrow.png' alt='arrow'/>
+            </div>
 
             <div id="sub1" className={checkSubject1()}></div>
 

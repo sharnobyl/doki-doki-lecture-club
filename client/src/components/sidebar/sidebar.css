@@ -22,6 +22,9 @@
     margin-top: 10px;
     border-radius: 15px;
     transition: 0.2s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menuBtn:hover {
@@ -99,4 +102,8 @@
 .subjectSelected {
     background-color: rgb(202, 21, 126);
     color: white;
+}
+
+#arrow{
+    width: 20px;
 }
