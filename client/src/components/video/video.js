@@ -28,7 +28,7 @@ function Video(props) {
     <div class="videoplayer">
       <YouTube
         id="YouTube"
-        videoId="gPPxfPThq20"
+        videoId={lectureData[props.selectedVideo].lectureLink}
       >
         Browser not compatible
       </YouTube>
