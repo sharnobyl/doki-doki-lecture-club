@@ -13,6 +13,9 @@ const ChatBox = (props) => {
     const [display, setDisplay] = useState(null)
     const [time, setTime] = useState(0);
     const [active, setActive] = useState(false);
+    const [text, setText] = useState('')
+    const [currentTime, setCurrentTime] = useState(0)
+    const [lectureId, setLectureId] = useState('')
 
     function toggle() {
         setActive(!active);
@@ -27,10 +30,14 @@ const ChatBox = (props) => {
         () => {
             axios.get("http://localhost:5000/lecture").then(function (response) {
                 setMessages(response.data[props.selectedVideo].comments)
+                setLectureId(response.data[props.selectedVideo]._id)
             });
+
             setDisplay(messages.map(m => displayMessage(m)))
         }, [messages, props.selectedVideo]
     );
+
+
 
     useEffect(() => {
         let interval = null;
@@ -53,21 +60,15 @@ const ChatBox = (props) => {
         )
     }
 
-    const [text, setText] = useState('')
-    const [currentTime, setCurrentTime] = useState(0)
-    // const [lectureId, setLectureId] = useState('')
-    const [comment, setComment] = useState({})
+
 
     const submitComment = () => {
-        // setLectureId(props.selectedVideo._id)
-        setComment({
+        const comment = {
             userName: 'Benus Kazi',
             commentMessage: `${text}`,
             timeStampSeconds: `${currentTime}`
-        })
-
-        console.log(comment)
-        axios.post(`http://localhost:5000/lecture/62dbb4fe06b882ec1327cfdc/comment`, comment)
+        }
+        axios.post(`http://localhost:5000/lecture/${lectureId}/comment`, comment)
         setText('')
     }
 
