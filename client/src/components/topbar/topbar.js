@@ -12,7 +12,7 @@ export default function Topbar() {
     //set the booleans to check if a chibi has been clicked
     function imageClick(chibiID) {
 
-        if (Math.random()>0.90) {
+        if (Math.random() > 0.90) {
             startScare(chibiID)
         } else {
             switch (chibiID) {
@@ -33,7 +33,7 @@ export default function Topbar() {
             }
         }
 
-        
+
 
     }
 
@@ -47,19 +47,19 @@ export default function Topbar() {
     }
 
     //jumpscares
-    function startScare(chibiID){
+    function startScare(chibiID) {
         var staticScare = new Audio('/images/glitch.wav');
         document.getElementById('imgScare').src = link.concat(chibiID.concat("_scare.gif"))
         document.getElementById('divScare').style.visibility = "visible";
         staticScare.play();
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
             document.getElementById('divScare').style.visibility = "hidden";
             document.getElementById('imgscare').src = "/images/blank.png";
-          }, 500);
+        }, 500);
 
     }
-    
+
 
     return (
         <div className='topbar'>
@@ -73,8 +73,8 @@ export default function Topbar() {
                 <img src="/images/natsuki.png" id="natsuki" height="125" onMouseOver={e => (e.currentTarget.src = "/images/natsuki_hover.gif")} onMouseOut={e => changeImage(natsukiClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} alt="natsuki" />
                 <img src="/images/yuri.png" id="yuri" height="125" onMouseOver={e => (e.currentTarget.src = "/images/yuri_hover.gif")} onMouseOut={e => changeImage(yuriClick, e.currentTarget.id)} onClick={e => imageClick(e.currentTarget.id)} alt="yuri" />
             </div>
-            <div className='chibiScare' id ='divScare' style={{visibility:"hidden"}}>
-                <img src="/images/blank" id="imgScare" height='100vh' width='100vw'/>
+            <div className='chibiScare' id='divScare' style={{ visibility: "hidden" }}>
+                <img src="/images/blank" id="imgScare" height='100vh' width='100vw' alt="jumpscare" />
             </div>
         </div>
     )
