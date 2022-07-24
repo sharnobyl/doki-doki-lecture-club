@@ -7,7 +7,6 @@
     width: 23vw;
     background-image: url('../../../public/images/bkg-stripe.png');
     background-size: 25%;
-    /*background-color: rgb(240, 123, 191);*/
     border: 5px solid rgb(246, 184, 220);
     border-radius: 5px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -56,7 +55,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2px;    
+    margin-top: 2px;
 }
 
 #submitComment:hover {
