@@ -32,11 +32,14 @@ form {
     padding: 5px;
 }
 
-textarea {
+.textInput {
     height: 50px;
     outline: none;
     text-align: left;
     border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: rgb(218, 97, 168) 2px solid;
 }
 
 #submitComment {

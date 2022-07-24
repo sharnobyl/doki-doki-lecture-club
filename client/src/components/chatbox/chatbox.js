@@ -35,14 +35,14 @@ const ChatBox = (props) => {
     useEffect(() => {
         let interval = null;
         if (active) {
-          interval = setInterval(() => {
-            setTime(time => time + 1);
-          }, 1000);
+            interval = setInterval(() => {
+                setTime(time => time + 1);
+            }, 1000);
         } else if (!active && time !== 0) {
-          clearInterval(interval);
+            clearInterval(interval);
         }
         return () => clearInterval(interval);
-      }, [active, time]);
+    }, [active, time]);
 
     const displayMessage = (message) => {
         return (
@@ -52,12 +52,16 @@ const ChatBox = (props) => {
             </div>
         )
     }
+    const [text, setText] = useState('')
 
     const submitComment = () => {
+
+        // make an object comment
+
+
         setText('')
     }
 
-    const [text, setText] = useState('')
 
     const updateTextbox = (event) => {
         setText(event.target.value)
@@ -67,8 +71,8 @@ const ChatBox = (props) => {
         <div className='chatbox'>
             {display}
             <form>
-                <textarea id='text'></textarea>
-                <div id="submitComment" onClick={submitComment} textContent={text} onChange={updateTextbox}>Submit</div>
+                <input className="textInput" onChange={updateTextbox} value={text}></input>
+                <div id="submitComment" onClick={submitComment}>Submit</div>
             </form>
 
         </div>
