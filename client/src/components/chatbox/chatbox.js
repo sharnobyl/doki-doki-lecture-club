@@ -20,7 +20,7 @@ const ChatBox = (props) => {
                 setMessages(response.data[props.selectedVideo].comments)
                 setLectureId(response.data[props.selectedVideo]._id)
             });
-            
+
             setDisplay(messages.map(m => displayMessage(m)))
         }, [messages, props.selectedVideo]
     );
@@ -52,7 +52,9 @@ const ChatBox = (props) => {
         <div className='chatbox'>
             {display}
             <form>
-                <input className="textInput" onChange={updateTextbox} value={text}></input>
+                <input className="textInput" onChange={updateTextbox} value={text} onKeyPress={e => {
+                    if (e.key === 'Enter') e.preventDefault();
+                }}></input>
                 <div id="submitComment" onClick={submitComment}>Submit</div>
             </form>
 
