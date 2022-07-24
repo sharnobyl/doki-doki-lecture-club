@@ -55,11 +55,11 @@ const ChatBox = (props) => {
 
     const [text, setText] = useState('')
     const [currentTime, setCurrentTime] = useState(0)
-    const [lectureId, setLectureId] = useState('')
+    // const [lectureId, setLectureId] = useState('')
     const [comment, setComment] = useState({})
 
     const submitComment = () => {
-        setLectureId(props.selectedVideo._id)
+        // setLectureId(props.selectedVideo._id)
         setComment({
             userName: 'Benus Kazi',
             commentMessage: `${text}`,
