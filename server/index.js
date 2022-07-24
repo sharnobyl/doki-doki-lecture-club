@@ -14,8 +14,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/lecture', lectureRoute);
-// app.use('/lecture', lectureRoute);
-// app.use('/comment', commentRoute);
 
 const PORT = process.env.PORT || 5000;
 const DB_URL = process.env.DB_URL || 'mongodb+srv://ddlc:ddlc123@cluster0.z91exps.mongodb.net/?retryWrites=true&w=majority';
