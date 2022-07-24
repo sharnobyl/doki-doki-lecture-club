@@ -8,11 +8,9 @@
     background-color: rgb(246, 184, 220);
 }
 
-iframe {
+#YouTube {
     width: 70vw;
     height: calc(70vw/1.77);
-    left: 60px;
-    top: 60px;
 }
 
 h1 {

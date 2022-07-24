@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./video.css";
 import axios from "axios";
+import YouTube,{YouTubeProps} from 'react-youtube'
 
 function Video(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [lectureData, setLectureData] = useState([
     {
-      lectureLink: "https://www.youtube.com/embed/gPPxfPThq20",
+      lectureLink: "gPPxfPThq20",
     },
   ]);
 
@@ -25,18 +26,12 @@ function Video(props) {
 
   return (
     <div class="videoplayer">
-      <iframe
-        src={lectureData[props.selectedVideo].lectureLink}
-        frameBorder="0"
-        title="YouTube video player"
-        height="315"
-        width="560"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        scrolling="0"
+      <YouTube
+        id="YouTube"
+        videoId="gPPxfPThq20"
       >
         Browser not compatible
-      </iframe>
+      </YouTube>
       <div class="title">
         <h1 id="name">{lectureData[props.selectedVideo].lectureTitle}</h1>
         <h1 id="subject">{lectureData[props.selectedVideo].subject}</h1>
