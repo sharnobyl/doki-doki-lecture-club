@@ -5,7 +5,9 @@
     top: 65px;
     height: calc(70vw/1.77 + 90px);
     width: 23vw;
-    background-color: rgb(240, 123, 191);
+    background-image: url('../../../public/images/bkg-stripe.png');
+    background-size: 25%;
+    /*background-color: rgb(240, 123, 191);*/
     border: 5px solid rgb(246, 184, 220);
     border-radius: 5px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -54,7 +56,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2px;
+    margin-top: 2px;    
 }
 
 #submitComment:hover {
@@ -72,6 +74,9 @@ form {
     background-color: rgb(255, 255, 255);
     color:rgb(224, 78, 163);
     padding: 5px 10px 5px;
+    border: 2px rgb(218, 97, 168) solid;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 #commentbar {
@@ -82,4 +87,7 @@ form {
     padding: 5px 10px 5px;
     font-size: small;
     color: rgb(0, 0, 0);
+    border: 2px rgb(218, 97, 168) solid;
+    border-top: 0px none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
