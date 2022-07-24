@@ -48,9 +48,6 @@ export default function Jumpscare() {
                     <img src="/images/just-monica.png" id='monicaScare' height='100%' alt='monica jumpscare'/>
                 </div>
             </span>
-
-            
-
         </div>
     )
 }
