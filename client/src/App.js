@@ -9,22 +9,22 @@ import Jumpscare from './components/jumpscare/jumpscare';
 function App() {
 
   const [selectedVideo, setSelectedVideo] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const toggleVideo = (lectureKey) => {
     setSelectedVideo(lectureKey)
   }
 
-  const toggleTime = (seconds) => {
-    setSeconds(seconds)
+  const togglePlaying = () => {
+    setIsPlaying(!isPlaying)
   }
 
   return (
     <div className="App">
         
       <Sidebar toggleVideo={toggleVideo} />
-      <Video selectedVideo={selectedVideo} />
-      <ChatBox selectedVideo={selectedVideo} seconds={seconds}/>
+      <Video selectedVideo={selectedVideo} togglePlaying={togglePlaying}/>
+      <ChatBox selectedVideo={selectedVideo} playing={isPlaying}/>
       <Topbar />
       <Jumpscare />
     </div>
