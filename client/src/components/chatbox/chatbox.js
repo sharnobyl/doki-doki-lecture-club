@@ -11,6 +11,17 @@ const ChatBox = (props) => {
         },
     ]);
     const [display, setDisplay] = useState(null)
+    const [time, setTime] = useState(0);
+    const [active, setActive] = useState(false);
+
+    function toggle() {
+        setActive(!active);
+    }
+
+    function reset() {
+        setTime(0);
+        setActive(false);
+    }
 
     useEffect(
         () => {
@@ -21,19 +32,49 @@ const ChatBox = (props) => {
         }, [messages, props.selectedVideo]
     );
 
+    useEffect(() => {
+        let interval = null;
+        if (active) {
+            interval = setInterval(() => {
+                setTime(time => time + 1);
+            }, 1000);
+        } else if (!active && time !== 0) {
+            clearInterval(interval);
+        }
+        return () => clearInterval(interval);
+    }, [active, time]);
+
     const displayMessage = (message) => {
         return (
             <div class='messages'>
-                <p>{message.timeStampSeconds}</p>
-                <p>{message.userName}: </p>
+                <p>{message.timeStampSeconds} {message.userName}: </p>
                 <p>{message.commentMessage}</p>
             </div>
         )
+    }
+    const [text, setText] = useState('')
+
+    const submitComment = () => {
+
+        // make an object comment
+
+
+        setText('')
+    }
+
+
+    const updateTextbox = (event) => {
+        setText(event.target.value)
     }
 
     return (
         <div className='chatbox'>
             {display}
+            <form>
+                <input className="textInput" onChange={updateTextbox} value={text}></input>
+                <div id="submitComment" onClick={submitComment}>Submit</div>
+            </form>
+
         </div>
     )
 }

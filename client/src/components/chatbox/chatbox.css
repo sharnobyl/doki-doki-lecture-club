@@ -21,7 +21,45 @@ p {
 }
 
 .messages {
+    justify-content: space-between;
+}
+
+form {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.textInput {
+    height: 50px;
+    outline: none;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: rgb(218, 97, 168) 2px solid;
+}
+
+#submitComment {
+    position: relative;
+    height: 25px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgb(218, 97, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+#submitComment:hover {
+    background-color: rgb(224, 78, 163);
+}
+
+#submitComment:active {
+    left: 0.5px;
+    top: 0.5px;
 }
